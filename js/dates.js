@@ -12,3 +12,11 @@ function task1(){
     ];
     alert(getDayOfWeek(data));
 }
+
+function task2(){
+    let dataCurrent = new Date();
+    let dataNewYear = new Date(dataCurrent.getFullYear(), 0, 1);
+    dataNewYear.setFullYear(dataCurrent.getFullYear() + 1);
+    let diff = (dataNewYear - dataCurrent) / (1000 * 60 * 60 * 24);
+    console.log(diff.toFixed(0));
+}
