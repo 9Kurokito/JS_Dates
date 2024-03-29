@@ -37,3 +37,17 @@ function task3(){
     ];
     alert(`next: ${getNextday(data)}, curr: ${getDayOfWeek(data)}, prev: ${getPrevDay(data)}`);
 }
+
+function task4(){
+    let milliSec = prompt("Введите миллисекунды");
+    if (Number.isInteger(milliSec) || milliSec < 0){
+        alert("Ошибка ввода");
+    }
+    else{
+        let days = milliSec / (1000 * 60 * 60 * 24);
+        let hours = milliSec / (1000 * 60 * 60);
+        let minutes = milliSec / (1000 * 60);
+        let seconds = milliSec / 1000;
+        console.log(`d: ${days.toFixed(1)}\nh: ${hours.toFixed(1)}\nm: ${minutes.toFixed(1)}\ns: ${seconds.toFixed(1)}`);
+    }
+}
